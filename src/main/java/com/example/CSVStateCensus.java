@@ -16,7 +16,7 @@ public class CSVStateCensus {
         this.filePath = filePath;
     }
 
-    public List<String[]> readFile() {
+    public List<String[]> readFile() throws FilenotfoundException {
         List<String[]> data = new ArrayList<>();
 
         try (CSVReader reader = new CSVReaderBuilder(new FileReader(filePath)).build()) {
@@ -27,7 +27,7 @@ public class CSVStateCensus {
             }
         }
         catch (IOException e) {
-            e.printStackTrace();
+            throw new FilenotfoundException("CSV file path not correct") ;
         }
         return data;
     }

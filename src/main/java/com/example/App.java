@@ -1,9 +1,10 @@
 package com.example;
 
+import java.io.IOException;
 
 public class App 
 {
-    public static void main( String[] args )
+    public static void main( String[] args ) throws FilenotfoundException
     {
 
         System.out.println("Welcome to the Indian States Census Analyser Problem!");
