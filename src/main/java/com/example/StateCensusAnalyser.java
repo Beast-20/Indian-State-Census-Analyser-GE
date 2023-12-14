@@ -9,7 +9,7 @@ public class StateCensusAnalyser {
         this.obj = obj;
     }
 
-    public int num_records(){
+    public int num_records() throws FilenotfoundException{
         List<String[]> temp = obj.readFile();
         if(temp.size()==0){
             return 0;
